@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+}
+.gridContainer{
+    height: 100vh;/* if you want to span the whole height of viewport, use height not max height! */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "left top top top"
+    "left project project annoucement"
+    "left project project annoucement"
+    "left project project annoucement";
+}
+
+.left{
+    background-color: blue;
+    grid-area: left;
+}
+
+.projectGrid{
+    grid-area: project;
+    background-color: #ccc;
+}
+
+.annoucements{
+    grid-area: annoucement;
+    background-color: #ccc;
+}
