@@ -30,12 +30,14 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0px 10px 5px #ccc;
+    
    
 }
 
 .projectGrid{
     grid-area: project;
-    background-color: #ccc;
+    background-color: #D6EAF8 ;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));/* stop grid items expanding */
     grid-template-rows: auto;
@@ -43,9 +45,9 @@ body{
     padding: 2rem;
 }
 
-.annoucements{
+.announcements{
     grid-area: annoucement;
-    background-color: #ccc;
+    background-color: #D6EAF8;
 }
 
 .header{
@@ -131,6 +133,7 @@ body{
     align-items: end;
     justify-content: end;
     justify-items: space-between;
+    margin-top: 0;
 }
 
 .projectText{
@@ -138,7 +141,7 @@ body{
     overflow: scroll;
 
     margin-top: 0;
-    max-height: 6rem;
+    max-height: 6.5rem;
 }
 
 .searchBar{
@@ -149,9 +152,9 @@ body{
 }
 
 .searchBar input{
-    background-color: #ccc;
+    background-color: #D6EAF8;
     border-radius: 25px;
-    border-color: #ccc;
+    border-color: #D6EAF8;
     box-shadow: none;
     border-style: solid;
     margin-left: 1rem;
@@ -166,6 +169,7 @@ body{
 }
 
 .top{
+    margin-bottom: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -184,6 +188,8 @@ body{
 .bottomTop{
     display: flex;
     justify-content: space-between;
+    margin-top: 0;
+   
 }
 
 button{
@@ -199,6 +205,11 @@ button{
     margin-right: 2rem;
 }
 
+button:hover{
+    color: yellow;
+   /* look at the drum video for making elements bigger when in focus/hover */
+    
+}
 .buttons{
     display: flex;
     justify-content: space-between;
@@ -226,5 +237,23 @@ button{
 
 h2, h3, h4{
     margin: 0;
+}
+.contentHeader{
+    margin: 1rem;
+}
+
+.announcementsGrid{
+    margin: 1rem;
+    background-color: white;
+    display: grid;
+    padding: 1.5rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-radius: 8px;
+}
+
+.announcementCard{
+    border-bottom: solid lightgray 2px;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
 }
     
