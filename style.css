@@ -54,16 +54,26 @@ body{
     /* changed colour/fill from black to white, got into svg file and edit from there. */
 }
 
-.menuGrid{
+
+.menuGrid, .lowerMenu{/* remember to use a comma to select multiple selectors */
     display: grid;
     gap: .5rem;
     margin-right: 1rem;
     margin-top: 4rem;
     line-height: 1.5;
-    
-    grid-template-columns: .5fr 1fr;
-    grid-template-rows: repeat(9, 1fr);
     color: white;
+    grid-template-columns: .5fr 1fr;
+    
+    
+}
+
+.menuGrid{    
+    grid-template-rows: repeat(6, 1fr);    
+}
+
+.lowerMenu{
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: 1.25rem;
 }
 
 .sideIcon{
@@ -79,3 +89,4 @@ body{
     margin-left: 0;
     font-size: 1.25rem;
 }
+
