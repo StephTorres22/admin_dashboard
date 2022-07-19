@@ -12,7 +12,7 @@ body{
     min-height: 100vh;/* if you want to span the whole height of viewport, use min-height not max height! */
     display: grid;
     grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: .75fr repeat(3, 1fr);
     grid-template-areas: 
     "left top top top"
     "left project project annoucement"
@@ -27,6 +27,10 @@ body{
 
 .topBar{
     grid-area: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
 }
 
 .projectGrid{
@@ -103,6 +107,7 @@ body{
     flex-wrap: wrap;
     background-color: white;
     border-radius: 8px;
+    padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 0;
     box-shadow: -8px 0px 0px yellow;/* first number is x direction, neg for left, pos for right
@@ -131,8 +136,95 @@ body{
 .projectText{
     padding: 1rem;
     overflow: scroll;
-        
+
     margin-top: 0;
     max-height: 6rem;
+}
+
+.searchBar{
+    
+    margin: 2rem;
+    display: flex;    
+        
+}
+
+.searchBar input{
+    background-color: #ccc;
+    border-radius: 25px;
+    border-color: #ccc;
+    box-shadow: none;
+    border-style: solid;
+    margin-left: 1rem;
+    font-size: 1.5rem
+    
+}
+
+.topIcon{
+    width: 2rem;
+    height: auto;
+   
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.topRight{
+    display: flex;
+    gap: 1rem;
+    margin-right: 2rem;
+    flex: 0 0 auto;
+    justify-self: end;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottomTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    font-size: 1.25rem;
+    border-radius: 25px;
+    background-color: #3498DB;
+    color: white;
+    border: #3498DB;
+    border-style: solid;
+    padding: .75rem;
+    width: 8rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.userIcon{
+    width: 4rem;
+    height: auto;
+    background-color: white;
+
+}
+
+.user{
+    display: flex;
+    margin:2rem
+    
+}
+.username{
+    margin-left: 1rem;
+    align-self: center;
+}
+
+h2, h3, h4{
+    margin: 0;
 }
     
