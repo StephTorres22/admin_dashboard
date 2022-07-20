@@ -256,4 +256,28 @@ h2, h3, h4{
     margin-bottom: 2rem;
     padding-bottom: 1rem;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px; /* height does lower bar */
+    }/* can't get lower bar */
+
+::-webkit-scrollbar-x{
+    width: 5px;
+
+}
+    
+    ::-webkit-scrollbar-track {
+    
+    box-shadow: inset 0 0 5px #3498DB; 
+    border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: #3498DB; 
+    border-radius: 10px;
+    }
+    
+    
     
