@@ -76,21 +76,53 @@ h1, h2, h3, h4, p{
     align-self: center;
 
 }
-@media only screen and (max-width: 1520px){
+
+.title__icon{
+    width: 3rem;
+    height: auto;
+    align-self: center;
+}
+
+.sidebar__icon{
+    width: 2rem;
+    height: auto;
+    align-self: center;
+    
+}
+
+.topbar__icon{
+    width: 2rem;
+    height: auto;
+    align-self: center;  
+}
+
+.userIcon{
+    width: 4rem;
+    height: auto;
+    background-color: white;
+}
+
+.project__icon{
+    width: 1.5rem;
+    height: auto;
+    margin: .5em;
+}
+
     
 h1{
-    font-size: 1.75rem;
+    font-size: 2rem;
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 h3{
-    font-size: 1.25rem
+    font-size: 1.5rem
 }
 
 body{
+    font-family: var(--ff-roboto);
     display: grid;
     grid-template-columns: minmax(0 .5fr) 2fr 1fr 1fr;
     grid-template-rows: .2fr repeat(3, 1fr);
@@ -101,10 +133,12 @@ body{
     padding-left: .5rem;
     background-color: var(--clr-primary);
     
+    
 }
 
 nav{
     display: grid;
+    
 }
 
 
@@ -154,6 +188,7 @@ search{
 
 .topbar__right{
     display: flex;
+    margin-right: 1em;
     gap: 1em;
     justify-content: space-evenly;
     align-self: center;
@@ -163,7 +198,7 @@ search{
 
 .topbar__bottom{
     margin: 1em;
-    margin-bottom: 0;
+    margin-bottom: 1em;
     display: flex;
     justify-content: space-between;
     
@@ -236,7 +271,7 @@ main{
 }
 
 .projectText{
-    display: flex;
+    display: block;
     min-width: 0;
     flex: 0 1 auto;
     flex-wrap: wrap;
@@ -245,104 +280,85 @@ main{
 
 .main__right{
     padding-top: 1em;
+    position: sticky;
+}
+
+.announcements, .trending{
+    padding-right: 2em;
+    position: sticky;
+}
+
+.trending{
+    margin-top: 2em;
 }
 
 .announcementsGrid  {
-    padding-top: 2em;
+    margin-top: 2.5em;
+    padding-top: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: white;
+    border-radius: 8px;
 }
 
-
-
-
-}
-
-
-
-
-
-
-
-@media only screen and (min-width: 1520px){
-
-h1{
-    font-size: 3rem;
-}
+.trendingGrid{
+    margin-top: 1.5em;
     
-h3{
-    font-size: 1.75rem;
-}
-
-
-/* Layouts */
-
-body{
+    padding: .5em 1em;
     
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr;
-    grid-template-rows: .75fr repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.announcementsGrid__card{
+    border-bottom: solid lightgray 2px;
+    margin-bottom: 1rem;
+    max-width: 25rem;
     
 }
 
-main{
-    grid-area: main;
-   
-    
-   
-    display: flex;
-    
-    justify-content: space-between;
-    padding: 1em;
-    box-shadow: inset 0 .5em 0.6em rgb(204, 204, 204);
-
-}
-
-.sidebar{
-    grid-area: left;
+.topbar__btngroup button{
+    font-size: 1rem;
+    border-radius: 25px;
     background-color: var(--clr-primary);
     color: white;
-    min-height: 100%;
-    position: sticky;
-    top: 2em;
-    
+    border: none;
+    padding: .75em;
+    width: 6em;
     
 }
 
-nav{
-    display: grid;
-    margin: 1em;
-    position: sticky;
-    top: 1em;
 
-}
-nav li{
+
+
+
+
+@media only screen and (min-width: 1200px){
+
+.projectsGrid{
     display: grid;
-    grid-template-columns: .5fr 1fr;
-    gap: .5em;
+    grid-template-columns: 1fr 1fr;/* stop grid items expanding */
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.projectsGrid__card{   
+    background-color: white;
+    margin-right: 1em;
+    border-radius: 8px;  
     margin-bottom: 1em;
-}
-
-.topbar{
-    
-    grid-area: top;
+    padding: 0 1em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  
-}
+    flex: 1 1 auto;
+    min-width: 0;
 
-
-
-.topbar__top{
-    margin: 2em;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.search{
-    display: flex;
-    align-self: center;
 }
 
 .topbar__top input{
@@ -353,161 +369,39 @@ nav li{
     box-shadow: none;
     margin-left: 1em;
     font-size: 1.5rem;
-    width: 30em;
+    width: 22em;
 
-}
-
-.topbar__right{
-    display: flex;
-    gap: 1em;
-    justify-content: space-evenly;
-    align-self: center;
-    align-items: center;
-    align-content: center;
-}
-
-.topbar__bottom{
-    margin: 2em;
-    display: flex;
-    justify-content: space-between;
-    
-    
-}
-
-.topbar__bottom__left{
-    display: flex;
-    align-self: center;
-    gap: 1em;
-}
-
-.topbar__bottom__left p {
-    margin-top: .5em;
-}
-
-.topbar__btngroup{
-    align-self: center;
-}
-
-.topbar__btngroup button{
-    font-size: 1.25rem;
-    border-radius: 25px;
-    background-color: var(--clr-primary);
-    color: white;
-    border: none;
-    padding: .75em;
-    width: 6em;
-    
-}
-
-.topbar__btngroup button + button{
-    margin-left: 2em;
-}
-
-.projectsGrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;/* stop grid items expanding */
-    grid-template-rows: auto;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.projectsGrid__card{
-    display: flex;
-    max-width: 35em;
-    padding-right: 1em;
-    flex-wrap: wrap;
-    background-color: white;
-    border-radius: 8px;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 0;
-    box-shadow: -8px 0px 0px orange;/* first number is x direction, neg for left, pos for right
-                                        second number is y direction, third number blur, set to 0 means sharp and nothing is seen top and bottom  */
-    
-}
-
-.projects{
-    background-color: var(--clr-main);
-}
-
-.projectText{
-    padding-right: 1em;
-}
-
-.announcements, .trending{
-    background-color: var(--clr-main);
-
-}
-
-
-.announcementsGrid, .trendingGrid{
-    margin: 1rem;
-    margin-top: 2.75em;
-    background-color: white;
-    display: grid;
-    padding: 1.5rem;
-    grid-template-rows: 1fr 1fr 1fr;
-    border-radius: 8px;
-    
-    
-       
-    
-    padding-top: 1em;
-}
-
-.announcementsGrid__card{
-        border-bottom: solid lightgray 2px;
-        margin-bottom: 1rem;
-        max-width: 25rem;
-}
-
-.main__right{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--clr-main);
-    
-}
-
-.sidebar__icon{
-    margin-left: 2em;
-}
-
-
-
-}
-
-/* layouts look alright down to about 1200px */
-
-
-/* icon images */
-
-.title__icon{
-    width: 3rem;
-    height: auto;
-    align-self: center;
-}
-
-.sidebar__icon{
-    width: 2rem;
-    height: auto;
-    align-self: center;
-    
 }
 
 .topbar__icon{
-    width: 2rem;
+    width: 2.5rem;
     height: auto;
     align-self: center;  
 }
 
-.userIcon{
-    width: 4rem;
-    height: auto;
-    background-color: white;
+
+
 }
 
-.project__icon{
-    width: 1.5rem;
-    height: auto;
-    margin: .5em;
+@media only screen and (min-width: 1400px){
+
+    .topbar__btngroup button{
+        font-size: 1rem;
+        border-radius: 25px;
+        background-color: var(--clr-primary);
+        color: white;
+        border: none;
+        padding: .75em;
+        width: 7em;
+        
+    }
+
+    .topbar__btngroup button + button{
+        margin-left: 2em;
+    }
+    
 }
+
+
+    
+
