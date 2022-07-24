@@ -12,22 +12,49 @@
     --ff-roboto: "Roboto", sans-serif;
 }
 
-aside{
-    margin: 0;
-    
-}
-
 body{
+    display: grid;
+    font-family: var(--ff-roboto);
     margin: 0;
     padding: 0;
     min-width: 100vw;
     min-height: 100vh;
-    display: grid;
-    grid-template-areas: 
-    "left top top top"
-    "left main main main"
-    "left main main main"
-    "left main main main";
+}
+
+aside{
+    margin: 0;
+}
+
+.title__icon{
+    width: 3rem;
+    height: auto;
+    align-self: center;
+}
+
+.sidebar__icon{
+    width: 2rem;
+    height: auto;
+    align-self: center;
+    
+}
+
+.topbar__icon{
+    width: 2rem;
+    height: auto;
+    align-self: center;
+      
+}
+
+.userIcon{
+    width: 4rem;
+    height: auto;
+    background-color: white;
+}
+
+.project__icon{
+    width: 1.5rem;
+    height: auto;
+    margin: .5em;
 }
 
 main
@@ -77,63 +104,10 @@ h1, h2, h3, h4, p{
 
 }
 
-.title__icon{
-    width: 3rem;
-    height: auto;
-    align-self: center;
-}
-
-.sidebar__icon{
-    width: 2rem;
-    height: auto;
-    align-self: center;
-    
-}
-
-.topbar__icon{
-    width: 2rem;
-    height: auto;
-    align-self: center;  
-}
-
-.userIcon{
-    width: 4rem;
-    height: auto;
-    background-color: white;
-}
-
-.project__icon{
-    width: 1.5rem;
-    height: auto;
-    margin: .5em;
-}
-
-    
-h1{
-    font-size: 2rem;
-}
-
-h2{
-    font-size: 1.75rem;
-}
-
-h3{
-    font-size: 1.5rem
-}
-
-body{
-    font-family: var(--ff-roboto);
-    display: grid;
-    grid-template-columns: minmax(0 .5fr) 2fr 1fr 1fr;
-    grid-template-rows: .2fr repeat(3, 1fr);
-}
-
 .sidebar{
     grid-area: left;
     padding-left: .5rem;
-    background-color: var(--clr-primary);
-    
-    
+    background-color: var(--clr-primary);   
 }
 
 nav{
@@ -160,31 +134,255 @@ nav li{
 
 .topbar__top{
     margin: .75em;
-
     margin-bottom: 0;
     display: flex;
-    justify-content: space-between;
-    align-content: flex-start;
-    align-self: ;
+    justify-content: space-between;   
     
 }
 
-search{
+.topbar__top img{
+    align-items: center;
+    align-content: center;
+}
+
+
+
+main{
+
+    grid-area: main;
+    background-color: var(--clr-main);
+    
+}
+
+.main__right{
+    background-color: var(--clr-main);
+    margin-right: 0;
+    
+}
+
+.search{
     display: flex;
-    align-self: center;
+    align-items: center;
+}
+
+
+
+@media only screen and (min-width: 350px) and (max-width: 650px){
+
+    h1{
+        font-size: 1.3rem;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+
+    h3{
+        font-size: 1.15rem;
+    }
+
+    ul{
+        margin-right: .5em;
+    }
+
+    .userIcon{
+        width: 3rem;
+        height: auto;
+        background-color: white;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr, 1.5fr 1.5fr 1fr;
+        grid-template-rows: .01fr repeat(3, 1fr);
+        grid-template-areas: 
+        "top top top top"
+        "left main main main"
+        "left main main main"
+        "left main main main";
+    }
+
+    .topbar{
+        display: flex;
+        
+    }
+
+    .topbar__top{
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        margin: 0
+        
+    }
+    
+    .search{
+        margin-left: .5em;
+        margin-top: .5em;
+        align-self: flex-start;
+        
+    }
+
+    .topbar__right{
+        display: flex;
+        margin-top: .5em;
+        margin-right: .5em;
+    }
+
+    .topbar__right h3{
+        margin-top: 0;
+        margin-left: .5em;
+    }
+
+    .topbar__bottom{
+        margin-bottom: .5em;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .topbar__bottom__left{
+        display: flex;
+        padding-bottom: .5em;
+
+    }
+
+    .topbar__bottom__left p {
+        margin-bottom: 0;
+        margin-left: .5em;
+    }
+
+    .topbar__bottom__left h2{
+        margin-top: 0;
+        margin-left: .5em;
+    }
+
+    .topbar__top input{
+        align-self: center;
+        background-color: var(--clr-main);
+        border-color: var(--clr-main);
+        border-radius: 25px;
+        box-shadow: none;
+        margin-left: 0;
+        font-size: 1.5rem;
+        width: 7em;
+    
+    }
+
+    .topbar__bottom__left{
+        display: flex;
+        justify-content: center;
+    }
+
+    .topbar__btngroup{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .topbar__btngroup button{
+        font-size: 1rem;
+        border-radius: 25px;
+        background-color: var(--clr-primary);
+        color: white;
+        border: none;
+        padding: .75em;
+        width: 5em;
+        margin-left: .5em;
+        margin-right: .5em;
+        
+    }
+
+    
+
+    .projects>h3{
+        margin-left: .5em;
+    }
+
+    .projectsGrid{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);/* stop grid items expanding */
+        grid-template-rows: auto;
+        gap: .5rem;
+        padding: .5rem;
+    }
+
+    .projectsGrid__card{   
+        background-color: white;
+        margin-right: 0;
+        border-radius: 8px;  
+        margin-bottom: .5em;
+        padding: 0 .5em;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+    
+    }
+
+    .projectText{
+        display: block;
+    }
+
+
+    
+}
+
+
+@media only screen and (min-width: 650px) and (max-width:1200px){
+    
+
+body{
+    
+    display: grid;
+    grid-template-columns: .75fr 2fr 2fr 1fr;
+    grid-template-rows: .1fr repeat(3, 1fr);
+    grid-template-areas: 
+    "top top top top"
+    "left main main main"
+    "left main main main"
+    "left main main main";
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.75rem;
+}
+
+h3{
+    font-size: 1.5rem
+}
+    
+
+.topbar{
+    display: flex;
+}
+
+.topbar__top{
+    display: flex;
+    
+    
+    justify-items: space-between;
+    align-items: center;
+    
 }
 
 .topbar__top input{
     align-self: center;
+    
     background-color: var(--clr-main);
     border-color: var(--clr-main);
     border-radius: 25px;
     box-shadow: none;
-    margin-left: 1em;
+    margin-left: 0;
     font-size: 1.5rem;
     width: 12em;
 
 }
+
+
 
 .topbar__right{
     display: flex;
@@ -245,7 +443,7 @@ main{
     grid-template-columns: minmax(0, 1fr);/* stop grid items expanding */
     grid-template-rows: auto;
     gap: 1rem;
-    padding: 2rem;
+    padding: .5em;
 }
 
 .projectsGrid__card{   
@@ -280,7 +478,7 @@ main{
 
 .main__right{
     padding-top: 1em;
-    position: sticky;
+    
 }
 
 .announcements, .trending{
@@ -292,11 +490,19 @@ main{
     margin-top: 2em;
 }
 
+.main__right{
+    margin-right: .5em;
+}
+
+.announcements, .trending{
+    padding-right: .5em;
+}
+
 .announcementsGrid  {
-    margin-top: 2.5em;
+    margin-top: 1em;
     padding-top: .5em;
     padding-left: 1em;
-    padding-right: 1em;
+    padding-right: .5em;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     background-color: white;
@@ -333,12 +539,119 @@ main{
     
 }
 
+}
 
 
 
 
 
-@media only screen and (min-width: 1200px){
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+
+    h1{
+        font-size: 2rem;
+    }
+    
+    h2{
+        font-size: 1.75rem;
+    }
+    
+    h3{
+        font-size: 1.5rem
+    }
+
+body{
+    grid-template-columns: .75fr 2fr 2fr 1fr;
+    grid-template-rows: .1fr repeat(3, 1fr);
+    grid-template-areas: 
+    "left top top top"
+    "left main main main"
+    "left main main main"
+    "left main main main";
+}
+
+.topbar{
+    display: flex;
+}
+
+.topbar__top{
+    display: flex;
+    
+    
+    justify-items: space-between;
+    align-items: center;
+    
+}
+
+.topbar__top input{
+    align-self: center;
+    
+    background-color: var(--clr-main);
+    border-color: var(--clr-main);
+    border-radius: 25px;
+    box-shadow: none;
+    margin-left: 0;
+    font-size: 1.5rem;
+    width: 12em;
+
+}
+
+
+
+.topbar__right{
+    display: flex;
+    margin-right: 1em;
+    gap: 1em;
+    justify-content: space-evenly;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+}
+
+.topbar__bottom{
+    margin: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.topbar__bottom__left{
+    display: flex;
+    align-self: center;
+    gap: 1em;
+}
+
+.topbar__bottom__left p {
+    margin-top: .5em;
+}
+
+.topbar__btngroup{
+    align-self: center;
+}
+
+.topbar__btngroup button{
+    font-size: 1rem;
+    border-radius: 25px;
+    background-color: var(--clr-primary);
+    color: white;
+    border: none;
+    padding: .75em;
+    width: 8em;
+    
+}
+
+.topbar__btngroup button + button{
+    margin-left: 1em;
+}
+
+.projects>h3{
+    margin-left: 1em;
+}
+
+
+
+
 
 .projectsGrid{
     display: grid;
@@ -346,6 +659,7 @@ main{
     grid-template-rows: auto;
     gap: 1rem;
     padding: 2rem;
+    padding-top: .5em;
 }
 
 .projectsGrid__card{   
@@ -358,7 +672,14 @@ main{
     flex-direction: column;
     flex: 1 1 auto;
     min-width: 0;
+   
+    box-shadow: -8px 0px 0px orange;
 
+}
+
+.projectText{
+    padding-right: 1em;
+    overflow: hidden;
 }
 
 .topbar__top input{
@@ -378,10 +699,11 @@ main{
     height: auto;
     align-self: center;  
 }
-
-
-
 }
+
+
+
+
 
 @media only screen and (min-width: 1400px){
 
@@ -401,6 +723,8 @@ main{
     }
     
 }
+
+
 
 
     
