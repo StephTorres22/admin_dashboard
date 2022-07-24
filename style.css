@@ -46,8 +46,10 @@ body{
 }
 
 .announcements{
+    
     grid-area: annoucement;
     background-color: #D6EAF8;
+    
 }
 
 .header{
@@ -242,13 +244,15 @@ h2, h3, h4{
     margin: 1rem;
 }
 
-.announcementsGrid{
+.announcementsGrid, .trendingGrid{
     margin: 1rem;
     background-color: white;
     display: grid;
     padding: 1.5rem;
     grid-template-rows: 1fr 1fr 1fr;
     border-radius: 8px;
+    max-height: 22rem;    
+    overflow: hidden;
 }
 
 .announcementCard{
@@ -278,6 +282,14 @@ h2, h3, h4{
     background: #3498DB; 
     border-radius: 10px;
     }
+
+.trendingCard{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    margin-top: 1rem;
+
+    
+}
     
     
     
